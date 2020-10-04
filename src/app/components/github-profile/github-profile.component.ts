@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./github-profile.component.css']
 })
 export class GithubProfileComponent implements OnInit {
+  profile:any[];
 
   constructor(private profileService: GitProfileService) { 
     this.profileService.getProfileInfo().subscribe(profile => {
       console.log(profile);
+      this.profile = profile;
     })
   }
 
