@@ -1,8 +1,8 @@
-<div *ngIf="profile">
+<div *ngIf="profileService">
     <div class="panel panel-default">
         <div class="panel-heading">
-            {{profile.name}}
-            <small>{{profile.login}}</small> {{profile.company}}
+            {{profileService.name}}
+            <small>{{profileService.login}}</small>, works at {{profileService.company}}
         </div>
     </div>
 </div>
