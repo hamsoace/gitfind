@@ -12,7 +12,7 @@ export class GithubProfileComponent implements OnInit {
   constructor(private profileService: GitProfileService) { 
     this.profileService.getProfileInfo().subscribe(profile => {
       console.log(profile);
-      this.profileService = profile;
+      this.profile = profile;
     })
   }
 

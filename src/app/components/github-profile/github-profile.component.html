@@ -1,8 +1,15 @@
-<div *ngIf="profileService">
+<div [ngIf]="profile">
     <div class="panel panel-default">
         <div class="panel-heading">
-            {{profileService.name}}
-            <small>{{profileService.login}}</small>, works at {{profileService.company}}
+            {{profile.name}}
+            <small>{{profile.login}}</small>, works at {{profile.company}}
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="{{profile.avatar_url}}" alt="">
+                </div>
+            </div>
         </div>
     </div>
 </div>
