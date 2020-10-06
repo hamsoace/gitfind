@@ -1,8 +1,8 @@
-import { from } from 'rxjs';
+// import { from } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import 'rxjs/add/operator/map';
-import { url } from 'inspector';
+import 'rxjs/add/operator/map';
+// import { url } from 'inspector';
 
 
 @Injectable({
@@ -18,12 +18,11 @@ export class GitProfileService {
     this.userName = 'hamsoace';
   }
   getProfileInfo(){
-    return this.http.get("https://api.github.com/users/" + this.userName + "?client_id=" + this.clientId + "&client_secret=" + this.clientSecret);
+  	return this.http.get("https://api.github.com/users/" + this.userName + "?client_id=" + this.clientId + "&client_secret=" + this.clientSecret);
   }
 
-  getRepo(){
-    const url = `https:api.github.com/users/${this.userName}/repos?client_id=${this.clientId}&client_secret=${this.clientSecret}`
-    return this.http.get(url);
+  getProfileRepos(){
+  	return this.http.get("https://api.github.com/users/" + this.userName + "/repos?client_id=" + this.clientId + "&client_secret=" + this.clientSecret);
   }
   updateProfile(userName:string){
     this.userName = userName
