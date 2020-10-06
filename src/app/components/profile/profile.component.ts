@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../../services/profile.service';
+declare var $: any;
 
 @Component({
   selector: 'gg-profile',
@@ -10,6 +11,7 @@ export class ProfileComponent implements OnInit {
   profile:any[];
   repos: any[];
   username:string;
+  
 
   constructor(private profileService: ProfileService) { 
 
