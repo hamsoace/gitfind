@@ -12,7 +12,7 @@ Visit the application on https://hamsoace.github.io/gitfind
 
 ## Figma Link
 
-This is the link to my [figma](https://www.figma.com/) design 
+This is the link to my [figma](https://www.figma.com/file/Th4JPRP7Cc305iOc43nNBJ/Untitled?node-id=0%3A1) design 
 
 ## Development
 
