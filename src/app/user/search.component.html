@@ -1,0 +1,137 @@
+<div class="container">
+
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-info">
+        <div class="container">
+            <h1 style="color: cornsilk">GITFIND</h1>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <app-search-form (getName)='findUser($event)'></app-search-form>
+                    </li>
+
+                </ul>
+
+
+                <!-- <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+    </nav>
+
+    <body class="">
+        <div class="jumbotron  " style="background-image: url('https://media.theukdomain.uk/wp-content/uploads/2018/04/portfolio-websites-new-1320x566.jpg') ">
+
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div style="text-align: center" class="card">
+                            <h3> {{users.name}}</h3>
+                        </div>
+                        <table class=" jumbotron bg-info  form-group">
+                            <tbody>
+                                <tr>
+                                    <th class=" btn btn-light ">Github Username:</th>
+                                    <td> <a href="{{users.html_url}}" target="_blank">{{users.login}}</a></td>
+
+                                </tr>
+                                <tr>
+                                    <th class="btn btn-light">Repositories:</th>
+                                    <td>{{users.public_repos }}</td>
+                                </tr>
+                                <tr>
+                                    <th class=" btn btn-light">Date created:</th>
+                                    <td>{{users.created_at | datePipe }}</td>
+                                </tr>
+                                <tr>
+                                    <th class="btn btn-success">Followers:</th>
+                                    <td>{{users.followers}}</td>
+                                </tr>
+                                <tr>
+                                    <th class=" btn btn-warning">Following</th>
+                                    <td>{{users.following}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6 image-end">
+                    <img src="{{users.avatar_url}} " class="img-responsive rounded-circle" style="height: 250px;">
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <h2>View Repository</h2>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Repositories</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="">
+                                <div class="" style="justify-content: space-even;" *ngFor='let repository of userRepos.newRepository'>
+
+                                    <div class="card-deck mb-3 text-center">
+
+                                        <div class="card mb-4 shadow-sm" *ngIf='repository.name' appHighlight>
+                                            <div class="card-header">
+                                                <a href="{{repository.html_url}}" target="_blank" class="btn #76ff03 light-green accent-3
+                      ">{{repository.name}}</a>
+                                                <h4 class="my-0 font-weight-normal">Description: {{repository.description}}</h4>
+
+                                            </div>
+                                            <div class="card-body">
+                                                <h1 class="card-title pricing-card-title">Date Created: <br> <small class="text-muted">{{repository.created_at | datePipe}}</small></h1>
+
+                                                <!-- <button type="button" class="btn btn-lg btn-block btn-dark">Get started</button> -->
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr/>
+        <hr/>
+
+
+
+
+
+
+    </body>
+</div>
+
+
+
+<!-- Modal -->

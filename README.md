@@ -1,63 +1,61 @@
-# Github
-#### A github searching app that helps people to find github users by their username and github repo by their repo name.
-#### By Hamisi Andale
+# GitSearch
+
+
+## Author
+
+[Alex Mwaura](https://github.com/alexmwaura/Git-search)
 
 ## Description
-On the application's landing page we have a brief description of what the application does. By clicking on the arrows on the bottom of the page one is able to view my profile, clicking on the find user displays a user input of where one is supposed to search for any github user you want. Similarly for the 'Find a repo' button. The search results then display relevant information on the Github user and Github repository respectively.
+
+This is an Angular CLI application that allows a user to enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories based on github user name.
 
 
-## Live link
 
-Visit the application on https://hamsoace.github.io/gitfind
+## Live Page 
+https://ghpages2-ae9bc.firebaseapp.com/users
 
-## Figma Link
 
-This is the link to my [figma](https://www.figma.com/file/Th4JPRP7Cc305iOc43nNBJ/Untitled?node-id=0%3A1) design 
 
-## Development
+Composed of two main components.
+* `Search Users` -search for users on git-hub based on their usernames.
+* `Search Repositories` -search for repositories on git-hub based on their authoers name.
 
-#### Development server
+## BDD ##
+| Behavior                  | Input                     | Output                    |
+| ------------------------- | ------------------------- | ------------------------- |
+| Search for a github profile |Enter the username of the github User name | Displays the name, username, number of repositories,Joining date, followers, following and lists the repos  |
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation / Setup instruction
+* Open Terminal {Ctrl+Alt+T}
 
-#### Code scaffolding
+* git clone ```https://github.com/alexmwaura/Git-search```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* cd Git-Search
 
-#### Build
+* code . or atom . based on the text editor you have.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Run ng serve for a dev server. 
 
-#### Running unit tests
+* Navigate to http://localhost:4200/. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* `npm install && ng serve`
 
-#### Running end-to-end tests
+## Technology used ##
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Angular CLI
+* HTML 
+* CSS
+* Bootstrap 
+* Typescript
+* Generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
-#### Further help
+## Known Bugs
+* No known bug now but pull requests are encouraged
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Contact Information 
 
-## Making Modifications
-To make advancements/modifications, follow these steps:
+If you have any question or contributions, please email me at [alexmwaura43@gmail]
 
-- Fork the repository
-- Create a new branch (`git checkout -b improve-feature`)
-- Make the appropriate changes in the files
-- Add changes made
-- Commit your changes (`git commit -am 'Improve feature'`)
-- Push to the branch (`git push origin improve-feature`)
-- Create a Pull Request 
-
-## Technologies used
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
-The technologies used Html,Css,Typescript and Bootstrap
-
-## Support and Contact Details
-Should you have any feedback,questions or recommendations, feel free to email me at [felkiriinya@gmail.com](mailto:hamsoace@gmail.com)
-
-## [License](https://github.com/hamsoace/gitfind/blob/master/LICENSE)
-
-Copyright (c) 2020 [Hamisi Andale](https://github.com/hamsoace)
+## License
+* *MIT License:*
+* Copyright (c) 2019 **Alex mwaura**
